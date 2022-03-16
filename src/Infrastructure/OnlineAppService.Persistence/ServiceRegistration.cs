@@ -6,9 +6,10 @@ namespace OnlineAppService.Persistence
 {
     public static class ServiceRegistration
     {
-        public static void AddPersistenceServices(this IServiceCollection serviceCollection, IConfiguration configuration)
+        public static IServiceCollection AddPersistenceServices(this IServiceCollection serviceCollection, IConfiguration configuration)
         {
            serviceCollection.AddPersistency(configuration);
+            return serviceCollection;
         }
     }
 }

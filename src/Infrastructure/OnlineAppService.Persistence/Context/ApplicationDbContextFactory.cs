@@ -15,7 +15,7 @@ namespace OnlineAppService.Persistence.Context
                 .Build();
 
             var builder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            var connectionString = configuration["ConnectionString"];
+            var connectionString = configuration["ConnectionStrings:ConnectionString"];
             builder.UseSqlServer(connectionString);
             return new ApplicationDbContext(builder.Options);
         }

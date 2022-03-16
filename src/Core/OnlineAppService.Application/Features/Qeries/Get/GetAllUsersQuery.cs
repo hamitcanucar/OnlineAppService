@@ -1,10 +1,9 @@
 ﻿using MediatR;
-using OnlineAppService.Application.Dto;
-using OnlineAppService.Application.Wrappers;
+using OnlineAppService.Model;
 
 namespace OnlineAppService.Application.Features.Qeries
 {
-    public class GetAllUsersQuery : IRequest<List<UserDto>>
+    public class GetAllUsersQuery : IRequest<List<UserModel>>
     {
         public GetAllUsersQuery()
         {

@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
-using OnlineAppService.Application.Features.Commands.Add;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OnlineAppService.Application.Features.Commands.Register;
+using OnlineAppService.Application.Features.Commands.Update;
+using OnlineAppService.Model;
+using OnlineAppService.Model.ResponseModels;
 
 namespace OnlineAppService.Application.Mapping
 {
@@ -12,8 +10,10 @@ namespace OnlineAppService.Application.Mapping
     {
         public GeneralMapping()
         {
-             CreateMap<Domain.Entities.User, Dto.UserDto>().ReverseMap();
-             CreateMap<Domain.Entities.User, AddUserCommand>().ReverseMap();
+             CreateMap<Domain.Entities.User, UserModel>().ReverseMap();
+             CreateMap<Domain.Entities.User, RegisterCommand>().ReverseMap();
+             CreateMap<Domain.Entities.User, UpdateUserCommand>().ReverseMap();
+             CreateMap<Domain.Entities.User, UpdateUserResponseModel>().ReverseMap();
         }
     }
 }

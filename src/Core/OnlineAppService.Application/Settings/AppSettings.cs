@@ -8,5 +8,6 @@ namespace OnlineAppService.Application.Settings
 {
     public class AppSettings
     {
+        public string Token { get; set; }
     }
 }

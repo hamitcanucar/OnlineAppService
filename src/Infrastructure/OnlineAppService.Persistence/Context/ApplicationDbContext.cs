@@ -14,8 +14,8 @@ namespace OnlineAppService.Persistence.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
-            
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
             modelBuilder.Entity<User>();
             
             base.OnModelCreating(modelBuilder);
